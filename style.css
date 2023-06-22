@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body {
+    height: 100vh;
+    background:linear-gradient(rgb(44, 0, 44),#100010);
+}
+header {
+    position: fixed;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    z-index: 100;
+}
+header .logo h2 {
+    font-size: 30px;
+    color: white;
+    letter-spacing: 5px;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: aliceblue;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.nav a.active {
+    color:rgb(41, 0, 41) ;
+    background-color: white;
+}
+.nav a:hover{
+    background-color: white;
+    color:rgb(41, 0, 41) ;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+main::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to top ,rgb(44, 0, 44), transparent);
+}
+.main img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+.main #moon {
+    mix-blend-mode: screen;
+    transform: translateY(100px);
+}
+.main h2 {
+    color: white;
+    transform: translateY(-150px);
+}
+
+footer h2 {
+    font-size: 30px;
+    color: white;
+    padding: 30px;
+}
+footer p {
+    color: white;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+@media (max-width:768px){
+
+    .nav a {
+    margin: 5px;
+    padding: 5px;
+}.main h2 {
+    font-size: 50px;
+}
+}@media (max-width:540px){
+    header {
+        display: flex;
+        flex-direction: column;
+}
+.main h2 {
+    font-size: 30px;
+}.nav a{
+   font-size: 12px;
+}
+}
